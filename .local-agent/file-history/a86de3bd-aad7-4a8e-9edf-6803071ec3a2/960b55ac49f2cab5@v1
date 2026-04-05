@@ -203,17 +203,6 @@ body {
 .scanlines.visible {
   opacity: 1;
 }
-@media (prefers-color-scheme: dark) {
-  .scanlines.visible {
-    background: repeating-linear-gradient(
-      0deg,
-      transparent 0px,
-      transparent 2px,
-      rgba(255,255,255,0.02) 2px,
-      rgba(255,255,255,0.02) 4px
-    );
-  }
-}
 
 /* ============================================
    PAGE TRANSITION (clip-path)
@@ -248,23 +237,6 @@ body {
   .marquee { animation: none; }
   .cursor-main, .cursor-follower { display: none; }
   body { cursor: auto; }
-}
-
-@media (hover: none) {
-  .cursor-main, .cursor-follower { display: none; }
-  body { cursor: auto; }
-  nav, .work-item, .gallery-item, form { cursor: auto; }
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme]) {
-    --bg: var(--white);
-    --fg: var(--black);
-    --fg-dim: var(--gray-600);
-    --fg-muted: var(--gray-500);
-    --border: var(--gray-200);
-    --border-subtle: var(--gray-100);
-  }
 }
 
 /* ============================================
@@ -335,7 +307,7 @@ nav {
   border: 1px solid var(--border);
   color: var(--fg);
   padding: 8px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -1014,10 +986,6 @@ nav {
   justify-content: center;
   transition: background 0.3s;
   cursor: pointer;
-  border: none;
-  color: inherit;
-  font-family: inherit;
-  padding: 0;
 }
 .gallery-item:hover { background: var(--gray-600); }
 

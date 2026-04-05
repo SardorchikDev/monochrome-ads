@@ -1,0 +1,8 @@
+{
+  "id": "4",
+  "subject": "Add mobile hamburger navigation",
+  "description": "Replace hidden nav-links on mobile with a hamburger menu + slide-in panel, integrated with page transitions",
+  "status": "in_progress",
+  "blocks": [],
+  "blockedBy": []
+}

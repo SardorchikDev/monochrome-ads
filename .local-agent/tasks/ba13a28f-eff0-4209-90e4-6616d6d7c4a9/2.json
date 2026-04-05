@@ -1,0 +1,8 @@
+{
+  "id": "2",
+  "subject": "Throttle/debounce scroll parallax",
+  "description": "Replace raw scroll handler with rAF throttling",
+  "status": "pending",
+  "blocks": [],
+  "blockedBy": []
+}

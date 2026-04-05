@@ -1,0 +1,8 @@
+{
+  "id": "1",
+  "subject": "Optimize grain noise to run at ~15fps instead of 60fps",
+  "description": "Replace rAF-based grain with a throttled interval to reduce CPU usage",
+  "status": "pending",
+  "blocks": [],
+  "blockedBy": []
+}

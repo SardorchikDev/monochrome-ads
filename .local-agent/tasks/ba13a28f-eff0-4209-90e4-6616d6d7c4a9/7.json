@@ -1,0 +1,8 @@
+{
+  "id": "7",
+  "subject": "Implement `prefers-reduced-motion` support",
+  "description": "Check prefers-reduced-motion media query and disable/skip animations for users who prefer it",
+  "status": "pending",
+  "blocks": [],
+  "blockedBy": []
+}

@@ -203,17 +203,6 @@ body {
 .scanlines.visible {
   opacity: 1;
 }
-@media (prefers-color-scheme: dark) {
-  .scanlines.visible {
-    background: repeating-linear-gradient(
-      0deg,
-      transparent 0px,
-      transparent 2px,
-      rgba(255,255,255,0.02) 2px,
-      rgba(255,255,255,0.02) 4px
-    );
-  }
-}
 
 /* ============================================
    PAGE TRANSITION (clip-path)
@@ -229,42 +218,6 @@ body {
 }
 .page-transition.wiping {
   clip-path: circle(150% at var(--cx, 50%) var(--cy, 50%));
-}
-
-/* ============================================
-   REDUCED MOTION
-   ============================================ */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  .reveal, .reveal-left, .reveal-right, .reveal-scale {
-    opacity: 1;
-    transform: none;
-  }
-  .marquee { animation: none; }
-  .cursor-main, .cursor-follower { display: none; }
-  body { cursor: auto; }
-}
-
-@media (hover: none) {
-  .cursor-main, .cursor-follower { display: none; }
-  body { cursor: auto; }
-  nav, .work-item, .gallery-item, form { cursor: auto; }
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme]) {
-    --bg: var(--white);
-    --fg: var(--black);
-    --fg-dim: var(--gray-600);
-    --fg-muted: var(--gray-500);
-    --border: var(--gray-200);
-    --border-subtle: var(--gray-100);
-  }
 }
 
 /* ============================================
@@ -330,22 +283,6 @@ nav {
 .nav-links a:hover { color: var(--fg); }
 .nav-links a:hover::after { width: 100%; }
 
-.sound-toggle {
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--fg);
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.sound-toggle:hover {
-  background: var(--fg);
-  color: var(--bg);
-}
-
 .theme-toggle {
   background: none;
   border: 1px solid var(--border);
@@ -361,88 +298,6 @@ nav {
 .theme-toggle:hover {
   background: var(--fg);
   color: var(--bg);
-}
-
-.mobile-menu-btn {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: 1px solid var(--border);
-  padding: var(--space-xs);
-  cursor: pointer;
-}
-.mobile-menu-btn-line {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--fg);
-  transition: transform 0.3s, opacity 0.3s;
-}
-.mobile-menu-btn[aria-expanded="true"] .mobile-menu-btn-line:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.mobile-menu-btn[aria-expanded="true"] .mobile-menu-btn-line:nth-child(2) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-.mobile-menu {
-  position: fixed;
-  inset: 0;
-  z-index: 10001;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-.mobile-menu.open {
-  pointer-events: auto;
-  opacity: 1;
-  visibility: visible;
-}
-.mobile-menu::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-}
-@media (prefers-color-scheme: light) {
-  .mobile-menu::before { background: rgba(0, 0, 0, 0.5); }
-}
-.mobile-menu-inner {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  height: 100%;
-  background: var(--bg);
-  border-left: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: var(--space-2xl) var(--space-xl);
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-}
-.mobile-menu.open .mobile-menu-inner {
-  transform: translateX(0);
-}
-.mobile-menu-link {
-  display: block;
-  font-size: clamp(24px, 4vw, 36px);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  color: var(--fg);
-  text-decoration: none;
-  padding: var(--space-md) 0;
-  border-bottom: 1px solid var(--border);
-  transition: transform 0.2s;
-}
-.mobile-menu-link:hover {
-  transform: translateX(8px);
 }
 
 /* ============================================
@@ -1014,10 +869,6 @@ nav {
   justify-content: center;
   transition: background 0.3s;
   cursor: pointer;
-  border: none;
-  color: inherit;
-  font-family: inherit;
-  padding: 0;
 }
 .gallery-item:hover { background: var(--gray-600); }
 

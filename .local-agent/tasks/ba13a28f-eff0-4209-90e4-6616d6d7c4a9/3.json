@@ -1,0 +1,8 @@
+{
+  "id": "3",
+  "subject": "Pause grid cell animation when not visible",
+  "description": "Use IntersectionObserver to pause the setInterval when section is off-screen",
+  "status": "pending",
+  "blocks": [],
+  "blockedBy": []
+}

@@ -13,12 +13,6 @@
 <meta name="theme-color" content="#000">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='black'/><text x='50' y='68' font-family='monospace' font-size='50' fill='white' text-anchor='middle'>V</text></svg>">
 <link rel="stylesheet" href="styles.css">
-<script>
-(function(){var t=localStorage.getItem('void-theme');if(t){document.documentElement.setAttribute('data-theme',t);if(t==='light')document.documentElement.style.background='#fff';}})();
-</script>
-<noscript>
-<style>.loader{display:none!important;}.reveal,.reveal-left,.reveal-right,.reveal-scale{opacity:1!important;transform:none!important;}.cursor-main,.cursor-follower{display:none!important;}body{cursor:auto!important;}</style>
-</noscript>
 </head>
 <body>
 
@@ -77,28 +71,9 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound on/off" title="Sound off">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
-    </button>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">Light</button>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
-      <span class="mobile-menu-btn-line"></span>
-      <span class="mobile-menu-btn-line"></span>
-    </button>
   </div>
 </nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
-  <div class="mobile-menu-inner">
-    <a href="#manifesto" class="mobile-menu-link">Manifesto</a>
-    <a href="#work" class="mobile-menu-link">Work</a>
-    <a href="#principles" class="mobile-menu-link">Principles</a>
-    <a href="#team" class="mobile-menu-link">Team</a>
-    <a href="#history" class="mobile-menu-link">History</a>
-    <a href="#contact" class="mobile-menu-link">Contact</a>
-  </div>
-</div>
 
 <!-- Main content -->
 <main>
@@ -106,7 +81,7 @@
 <!-- HERO -->
 <section class="hero" aria-label="Hero">
   <div class="vertical-text left" aria-hidden="true">Design Collective</div>
-  <div class="vertical-text right" aria-hidden="true">Berlin</div>
+  <div class="vertical-text right" aria-hidden="true">Est. 2024</div>
 
   <div class="hero-tag reveal">Est. 2024</div>
   <div class="hero-title-wrap reveal" id="heroTitleWrap">
@@ -161,7 +136,7 @@
     <div class="stat-label">Members</div>
   </div>
   <div class="stat reveal reveal-delay-4" style="border-right: none;" role="listitem">
-    <div class="stat-value" data-count="99">00</div>
+    <div class="stat-value">99%</div>
     <div class="stat-label">Reduction</div>
   </div>
 </div>
@@ -284,22 +259,22 @@
 
 <!-- GALLERY -->
 <section class="gallery" aria-label="Design patterns">
-  <button class="gallery-item reveal-scale magnetic-target" type="button" aria-label="Lines pattern">
+  <div class="gallery-item reveal-scale magnetic-target">
     <div class="gallery-pattern"></div>
     <span class="gallery-label">Lines</span>
-  </button>
-  <button class="gallery-item reveal-scale reveal-delay-1 magnetic-target" type="button" aria-label="Angles pattern">
+  </div>
+  <div class="gallery-item reveal-scale reveal-delay-1 magnetic-target">
     <div class="gallery-pattern"></div>
     <span class="gallery-label">Angles</span>
-  </button>
-  <button class="gallery-item reveal-scale reveal-delay-2 magnetic-target" type="button" aria-label="Patterns pattern">
+  </div>
+  <div class="gallery-item reveal-scale reveal-delay-2 magnetic-target">
     <div class="gallery-pattern"></div>
     <span class="gallery-label">Patterns</span>
-  </button>
-  <button class="gallery-item reveal-scale reveal-delay-3 magnetic-target" type="button" aria-label="Rhythm pattern">
+  </div>
+  <div class="gallery-item reveal-scale reveal-delay-3 magnetic-target">
     <div class="gallery-pattern"></div>
     <span class="gallery-label">Rhythm</span>
-  </button>
+  </div>
 </section>
 
 <!-- TEAM -->
@@ -394,12 +369,12 @@
       </div>
       <div class="contact-info-item">
         <h4>Social</h4>
-        <a href="#" rel="noopener noreferrer" target="_blank">Twitter / X</a><br>
-        <a href="#" rel="noopener noreferrer" target="_blank">Instagram</a><br>
-        <a href="#" rel="noopener noreferrer" target="_blank">Are.na</a>
+        <a href="#">Twitter / X</a><br>
+        <a href="#">Instagram</a><br>
+        <a href="#">Are.na</a>
       </div>
     </div>
-    <form class="contact-form reveal reveal-delay-2" id="contactForm" action="https://formspree.io/f/hello@void.space" method="POST" aria-label="Contact form">
+    <form class="contact-form reveal reveal-delay-2" id="contactForm" aria-label="Contact form">
       <div class="form-group">
         <label for="contactName">Name</label>
         <input type="text" id="contactName" name="name" required autocomplete="name">
@@ -435,9 +410,9 @@
         <h4 class="footer-col-title">Connect</h4>
         <ul class="footer-links">
           <li><a href="mailto:hello@void.space">hello@void.space</a></li>
-          <li><a href="#" rel="noopener noreferrer" target="_blank">Twitter / X</a></li>
-          <li><a href="#" rel="noopener noreferrer" target="_blank">Instagram</a></li>
-          <li><a href="#" rel="noopener noreferrer" target="_blank">Are.na</a></li>
+          <li><a href="#">Twitter / X</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Are.na</a></li>
         </ul>
       </div>
     </div>

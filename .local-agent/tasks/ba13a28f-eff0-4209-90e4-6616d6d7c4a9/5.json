@@ -1,0 +1,8 @@
+{
+  "id": "5",
+  "subject": "Add sound toggle UI control",
+  "description": "Add a visible sound button so users can toggle audio on/off",
+  "status": "pending",
+  "blocks": [],
+  "blockedBy": []
+}
