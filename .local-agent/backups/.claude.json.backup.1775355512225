@@ -1,0 +1,29 @@
+{
+  "numStartups": 1,
+  "theme": "dark-ansi",
+  "firstStartTime": "2026-04-05T02:17:04.271Z",
+  "opusProMigrationComplete": true,
+  "sonnet1m45MigrationComplete": true,
+  "migrationVersion": 11,
+  "changelogLastFetched": 1775355424947,
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "2.1.92",
+  "projects": {
+    "/home/sardorchikdev/monochrome-ads": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    }
+  },
+  "userID": "1080e48cdc29ff286680d41aa3ff3b5f851d703b74a1464edbdc7731c47553e6",
+  "lastReleaseNotesSeen": "2.1.92",
+  "officialMarketplaceAutoInstallAttempted": true,
+  "officialMarketplaceAutoInstalled": false,
+  "officialMarketplaceAutoInstallFailReason": "policy_blocked"
+}
