@@ -1,8 +1,0 @@
-{
-  "id": "6",
-  "subject": "Fix inconsistent 99% stat animation",
-  "description": "Make the 99% stat also use data-count animation for consistency",
-  "status": "pending",
-  "blocks": [],
-  "blockedBy": []
-}
