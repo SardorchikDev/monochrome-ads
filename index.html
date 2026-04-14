@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VOID — Design Collective</title>
-<meta name="description" content="VOID is a design collective operating at the intersection of art and technology. We believe in the power of constraint — that emptiness has weight, and silence has shape.">
-<meta property="og:title" content="VOID — Design Collective">
+<title>VOID — Design Studio</title>
+  <meta name="description" content="VOID is a design studio operating at the intersection of art and technology. We believe in the power of constraint — that emptiness has weight, and silence has shape.">
+  <meta property="og:title" content="VOID — Design Studio">
 <meta property="og:description" content="We do not add. We subtract — until only truth remains.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/og.jpg">
@@ -30,15 +30,7 @@
   <div class="loader-tagline">Subtract until only truth remains</div>
 </div>
 
-<!-- Custom cursors -->
-<div class="cursor-main" id="cursorMain" aria-hidden="true"></div>
-<div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
-
-<!-- Grain overlay -->
-<div class="grain-overlay" id="grainOverlay" aria-hidden="true">
-  <canvas id="grainCanvas"></canvas>
-</div>
-<div class="scanlines" id="scanlines" aria-hidden="true"></div>
+<div class="custom-cursor" id="cursor"></div>
 
 <!-- Page transition -->
 <div class="page-transition" id="pageTransition" aria-hidden="true"></div>
@@ -67,20 +59,14 @@
 
 <!-- NAV -->
 <nav role="navigation" aria-label="Main navigation">
-  <a href="#" class="logo magnetic-target" aria-label="VOID - Back to top">VOID</a>
+  <a href="#" class="logo" aria-label="VOID - Back to top">VOID</a>
   <ul class="nav-links">
-    <li><a href="#manifesto">Manifesto</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
-    <li><a href="#principles">Principles</a></li>
-    <li><a href="#team">Team</a></li>
-    <li><a href="#history">History</a></li>
+    <li><a href="#process">Process</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound on/off" title="Sound off">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
-    </button>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">Light</button>
     <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
       <span class="mobile-menu-btn-line"></span>
       <span class="mobile-menu-btn-line"></span>
@@ -91,12 +77,10 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
   <div class="mobile-menu-inner">
-    <a href="#manifesto" class="mobile-menu-link">Manifesto</a>
-    <a href="#work" class="mobile-menu-link">Work</a>
-    <a href="#principles" class="mobile-menu-link">Principles</a>
-    <a href="#team" class="mobile-menu-link">Team</a>
-    <a href="#history" class="mobile-menu-link">History</a>
-    <a href="#contact" class="mobile-menu-link">Contact</a>
+<a href="#services" class="mobile-menu-link">Services</a>
+  <a href="#work" class="mobile-menu-link">Work</a>
+  <a href="#process" class="mobile-menu-link">Process</a>
+  <a href="#contact" class="mobile-menu-link">Contact</a>
   </div>
 </div>
 
@@ -105,27 +89,20 @@
 
 <!-- HERO -->
 <section class="hero" aria-label="Hero">
-  <div class="vertical-text left" aria-hidden="true">Design Collective</div>
-  <div class="vertical-text right" aria-hidden="true">Berlin</div>
-
-  <div class="hero-tag reveal">Est. 2024</div>
+  <div class="hero-tag reveal">Berlin</div>
   <div class="hero-title-wrap reveal" id="heroTitleWrap">
-    <h1 class="hero-title" id="heroTitle">
+    <h1 class="hero-title kinetic-title" id="heroTitle">
       Define<br>
       Your<br>
       <span class="outline">Void</span>
     </h1>
   </div>
   <p class="hero-desc reveal reveal-delay-1">
-    We are a design collective operating at the intersection of art and technology. We believe in the power of constraint — that emptiness has weight, and silence has shape.
+    We work at the intersection of brand identity, digital design, and editorial. Our philosophy: subtract until only truth remains.
   </p>
-  <a href="#work" class="hero-cta magnetic-target reveal reveal-delay-2">Enter The Void</a>
-
-  <div class="grid-overlay reveal reveal-delay-3" aria-hidden="true">
-    <div class="grid-cell"></div><div class="grid-cell active"></div><div class="grid-cell"></div><div class="grid-cell active"></div>
-    <div class="grid-cell active"></div><div class="grid-cell"></div><div class="grid-cell active"></div><div class="grid-cell"></div>
-    <div class="grid-cell"></div><div class="grid-cell active"></div><div class="grid-cell"></div><div class="grid-cell active"></div>
-    <div class="grid-cell active"></div><div class="grid-cell"></div><div class="grid-cell active"></div><div class="grid-cell"></div>
+  <div class="hero-cta-wrap reveal reveal-delay-2">
+    <a href="#contact" class="hero-cta">Start a Project</a>
+    <a href="#work" class="hero-cta hero-cta-secondary">View Work</a>
   </div>
 </section>
 
@@ -166,44 +143,58 @@
   </div>
 </div>
 
-<!-- PRINCIPLES -->
-<section class="section" id="principles" aria-label="Design principles">
+<!-- SERVICES -->
+<section class="section" id="services" aria-label="Services">
   <div class="section-header reveal">
     <div>
-      <div class="section-label">Principles</div>
-      <div class="section-count">III — 06</div>
+      <div class="section-label">What We Do</div>
+      <div class="section-count">Services</div>
+    </div>
+  </div>
+  <div class="services-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);">
+    <div class="service-item" style="padding:var(--space-xl);background:var(--bg);">
+      <div class="service-num" style="font-family:'Space Mono';font-size:12px;color:var(--fg-muted);margin-bottom:var(--space-md);">01</div>
+      <h3 class="service-title" style="font-size:clamp(18px,2vw,24px);font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:var(--space-md);">Brand Identity</h3>
+      <p class="service-desc" style="font-size:14px;line-height:1.7;color:var(--fg-dim);">Strategic brand development from naming to complete visual systems.</p>
+    </div>
+    <div class="service-item" style="padding:var(--space-xl);background:var(--bg);">
+      <div class="service-num" style="font-family:'Space Mono';font-size:12px;color:var(--fg-muted);margin-bottom:var(--space-md);">02</div>
+      <h3 class="service-title" style="font-size:clamp(18px,2vw,24px);font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:var(--space-md);">Digital Design</h3>
+      <p class="service-desc" style="font-size:14px;line-height:1.7;color:var(--fg-dim);">Websites and digital products designed with precision.</p>
+    </div>
+    <div class="service-item" style="padding:var(--space-xl);background:var(--bg);">
+      <div class="service-num" style="font-family:'Space Mono';font-size:12px;color:var(--fg-muted);margin-bottom:var(--space-md);">03</div>
+      <h3 class="service-title" style="font-size:clamp(18px,2vw,24px);font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:var(--space-md);">Editorial</h3>
+      <p class="service-desc" style="font-size:14px;line-height:1.7;color:var(--fg-dim);">Publications and editorial design.</p>
+    </div>
+    <div class="service-item" style="padding:var(--space-xl);background:var(--bg);">
+      <div class="service-num" style="font-family:'Space Mono';font-size:12px;color:var(--fg-muted);margin-bottom:var(--space-md);">04</div>
+      <h3 class="service-title" style="font-size:clamp(18px,2vw,24px);font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:var(--space-md);">Spatial</h3>
+      <p class="service-desc" style="font-size:14px;line-height:1.7;color:var(--fg-dim);">Exhibition and environmental design.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="section" id="principles" aria-label="Our approach">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">Our Approach</div>
+      <div class="section-count">Philosophy</div>
     </div>
   </div>
   <div class="features">
     <div class="feature reveal reveal-delay-1">
-      <div class="feature-number">I</div>
-      <h3 class="feature-title">Embrace Void</h3>
-      <p class="feature-desc">Empty space is not absence — it is the most potent form of presence. Use it to create weight, hierarchy, and intention.</p>
+      <h3 class="feature-title">Less Is More</h3>
+      <p class="feature-desc">We believe in the power of restraint. Every element must earn its place. If it doesn't serve, it doesn't stay.</p>
     </div>
     <div class="feature reveal reveal-delay-2">
-      <div class="feature-number">II</div>
-      <h3 class="feature-title">Sharp Truth</h3>
-      <p class="feature-desc">Rounded edges soften the message. Sharp geometry cuts through noise and communicates with unfiltered directness.</p>
+      <h3 class="feature-title">Clarity First</h3>
+      <p class="feature-desc">Good design is invisible. It communicates without friction. We prioritize understanding over decoration.</p>
     </div>
     <div class="feature reveal reveal-delay-3">
-      <div class="feature-number">III</div>
-      <h3 class="feature-title">Monochrome</h3>
-      <p class="feature-desc">Color distracts. Black and white reveal structure. Strip away hue and what remains is pure form and function.</p>
-    </div>
-    <div class="feature reveal reveal-delay-1">
-      <div class="feature-number">IV</div>
-      <h3 class="feature-title">System</h3>
-      <p class="feature-desc">Design is not decoration — it is a system of decisions. Every margin, every weight, every rhythm serves the whole.</p>
-    </div>
-    <div class="feature reveal reveal-delay-2">
-      <div class="feature-number">V</div>
-      <h3 class="feature-title">Timeless</h3>
-      <p class="feature-desc">Trends age. Structure endures. We build systems that survive the death of the moment they were born in.</p>
-    </div>
-    <div class="feature reveal reveal-delay-3">
-      <div class="feature-number">VI</div>
-      <h3 class="feature-title">Less</h3>
-      <p class="feature-desc">If you can remove it, you should. The goal is not completion but reduction — to the point where no more can be taken.</p>
+      <h3 class="feature-title">Measured Color</h3>
+      <p class="feature-desc">Color is a tool, not ornament. We use it intentionally, never arbitrarily.</p>
     </div>
   </div>
 </section>
@@ -217,7 +208,7 @@
     </div>
   </div>
   <div class="work-grid">
-    <button class="work-item reveal-left magnetic-target" data-project="0">
+    <button class="work-item reveal-left" data-project="0">
       <div class="work-num">01</div>
       <div class="work-preview">
         <div class="work-preview-inner"><div class="work-preview-grid"></div></div>
@@ -226,7 +217,7 @@
       <span class="work-title">Black Mirror</span>
       <span class="work-tag">Identity System</span>
     </button>
-    <button class="work-item reveal-right magnetic-target" data-project="1">
+    <button class="work-item reveal-right" data-project="1">
       <div class="work-num">02</div>
       <div class="work-preview">
         <div class="work-preview-inner"><div class="work-preview-grid" style="background-size:32px 32px"></div></div>
@@ -235,7 +226,7 @@
       <span class="work-title">Silent Archive</span>
       <span class="work-tag">Digital Platform</span>
     </button>
-    <button class="work-item reveal-left magnetic-target" data-project="2">
+    <button class="work-item reveal-left" data-project="2">
       <div class="work-num">03</div>
       <div class="work-preview">
         <div class="work-preview-inner"><div class="work-preview-grid" style="background-size:12px 12px"></div></div>
@@ -244,7 +235,7 @@
       <span class="work-title">Zero One</span>
       <span class="work-tag">Brand System</span>
     </button>
-    <button class="work-item reveal-right magnetic-target" data-project="3">
+    <button class="work-item reveal-right" data-project="3">
       <div class="work-num">04</div>
       <div class="work-preview">
         <div class="work-preview-inner"><div class="work-preview-grid" style="background-size:24px 24px"></div></div>
@@ -261,78 +252,86 @@
   <div class="section-header reveal">
     <div>
       <div class="section-label">About</div>
-      <div class="section-title">The Void Approach</div>
+      <div class="section-title">Who We Are</div>
     </div>
-    <div class="section-count">001</div>
   </div>
   <div class="manifesto-content">
     <div class="manifesto-text reveal">
-      <p>Every design begins with a <strong>lie</strong> — the lie that more is better, that complexity equals sophistication, that every pixel must earn its place by being <em>seen</em>.</p>
-      <p>We start from the opposite premise. The most powerful design is the one you <strong>can't reduce further</strong> without it ceasing to be itself. That threshold — the edge before collapse — is where we work.</p>
-      <p>Our practice is one of <strong>systematic removal</strong>. Not decoration. Not expression. Reduction as method, restraint as discipline, absence as form.</p>
+      <p>VOID is a <strong>Berlin-based design studio</strong> working at the intersection of brand identity, digital design, and editorial.</p>
+      <p>We believe in <strong>restraint as a strategy</strong>. Every element must justify its existence. We remove what doesn't serve the message, keeping only what communicates with clarity.</p>
+      <p>Our work spans visual identity systems, digital experiences, and exhibitions — always guided by the same principle: <strong>subtract until only truth remains</strong>.</p>
     </div>
     <div class="manifesto-rules reveal reveal-delay-2">
-      <div class="manifesto-rule"><span>Embrace emptiness</span><span>&rarr;</span></div>
-      <div class="manifesto-rule"><span>Remove before adding</span><span>&rarr;</span></div>
-      <div class="manifesto-rule"><span>Monochrome reveals</span><span>&rarr;</span></div>
-      <div class="manifesto-rule"><span>Systems over gestures</span><span>&rarr;</span></div>
-      <div class="manifesto-rule"><span>Sharp communicates more</span><span>&rarr;</span></div>
-      <div class="manifesto-rule"><span>Subtract until truth</span><span>&rarr;</span></div>
+      <div class="manifesto-rule"><span>Clarity over decoration</span><span>&rarr;</span></div>
+      <div class="manifesto-rule"><span>Strategy before tactics</span><span>&rarr;</span></div>
+      <div class="manifesto-rule"><span>Restraint as creative tool</span><span>&rarr;</span></div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery" aria-label="Design patterns">
-  <button class="gallery-item reveal-scale magnetic-target" type="button" aria-label="Lines pattern">
-    <div class="gallery-pattern"></div>
-    <span class="gallery-label">Lines</span>
-  </button>
-  <button class="gallery-item reveal-scale reveal-delay-1 magnetic-target" type="button" aria-label="Angles pattern">
-    <div class="gallery-pattern"></div>
-    <span class="gallery-label">Angles</span>
-  </button>
-  <button class="gallery-item reveal-scale reveal-delay-2 magnetic-target" type="button" aria-label="Patterns pattern">
-    <div class="gallery-pattern"></div>
-    <span class="gallery-label">Patterns</span>
-  </button>
-  <button class="gallery-item reveal-scale reveal-delay-3 magnetic-target" type="button" aria-label="Rhythm pattern">
-    <div class="gallery-pattern"></div>
-    <span class="gallery-label">Rhythm</span>
-  </button>
+<!-- PROCESS -->
+<section class="section" id="process" aria-label="How we work">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">How We Work</div>
+      <div class="section-title">The Process</div>
+    </div>
+  </div>
+  <div class="process-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);">
+    <div class="process-step" style="padding:var(--space-xl);background:var(--bg);">
+      <div class="process-num" style="font-family:'Space Mono';font-size:11px;color:var(--fg-muted);margin-bottom:var(--space-md);">01</div>
+      <h3 class="process-title" style="font-size:clamp(16px,1.5vw,20px);font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:var(--space-sm);">Discovery</h3>
+      <p class="process-desc" style="font-size:14px;line-height:1.7;color:var(--fg-dim);">Understanding your context, constraints, and objectives.</p>
+    </div>
+    <div class="process-step" style="padding:var(--space-xl);background:var(--bg);">
+      <div class="process-num" style="font-family:'Space Mono';font-size:11px;color:var(--fg-muted);margin-bottom:var(--space-md);">02</div>
+      <h3 class="process-title" style="font-size:clamp(16px,1.5vw,20px);font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:var(--space-sm);">Strategy</h3>
+      <p class="process-desc" style="font-size:14px;line-height:1.7;color:var(--fg-dim);">Defining the problem before the solution.</p>
+    </div>
+    <div class="process-step" style="padding:var(--space-xl);background:var(--bg);">
+      <div class="process-num" style="font-family:'Space Mono';font-size:11px;color:var(--fg-muted);margin-bottom:var(--space-md);">03</div>
+      <h3 class="process-title" style="font-size:clamp(16px,1.5vw,20px);font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:var(--space-sm);">Execution</h3>
+      <p class="process-desc" style="font-size:14px;line-height:1.7;color:var(--fg-dim);">Iterative refinement with feedback.</p>
+    </div>
+    <div class="process-step" style="padding:var(--space-xl);background:var(--bg);">
+      <div class="process-num" style="font-family:'Space Mono';font-size:11px;color:var(--fg-muted);margin-bottom:var(--space-md);">04</div>
+      <h3 class="process-title" style="font-size:clamp(16px,1.5vw,20px);font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:var(--space-sm);">Delivery</h3>
+      <p class="process-desc" style="font-size:14px;line-height:1.7;color:var(--fg-dim);">Organized files and clear guidelines.</p>
+    </div>
+  </div>
 </section>
 
 <!-- TEAM -->
 <section class="section" id="team" aria-label="Team members">
   <div class="section-header reveal">
     <div>
-      <div class="section-label">Collective</div>
+      <div class="section-label">Team</div>
       <div class="section-count">XII — Members</div>
     </div>
   </div>
   <div class="team-grid">
-    <div class="team-member reveal reveal-delay-1 magnetic-target">
+    <div class="team-member reveal reveal-delay-1">
       <div class="team-portrait">
         <div class="portrait-placeholder" aria-hidden="true">AK</div>
       </div>
       <div class="team-name">Arina Kozlov</div>
       <div class="team-role">Creative Director</div>
     </div>
-    <div class="team-member reveal reveal-delay-2 magnetic-target">
+    <div class="team-member reveal reveal-delay-2">
       <div class="team-portrait">
         <div class="portrait-placeholder" aria-hidden="true">MB</div>
       </div>
       <div class="team-name">Max Brecht</div>
       <div class="team-role">Systems Lead</div>
     </div>
-    <div class="team-member reveal reveal-delay-3 magnetic-target">
+    <div class="team-member reveal reveal-delay-3">
       <div class="team-portrait">
         <div class="portrait-placeholder" aria-hidden="true">LN</div>
       </div>
       <div class="team-name">Lena Nordin</div>
       <div class="team-role">Typography</div>
     </div>
-    <div class="team-member reveal reveal-delay-4 magnetic-target">
+    <div class="team-member reveal reveal-delay-4">
       <div class="team-portrait">
         <div class="portrait-placeholder" aria-hidden="true">DV</div>
       </div>
@@ -343,33 +342,33 @@
 </section>
 
 <!-- TIMELINE -->
-<section class="section" id="history" aria-label="History">
+<section class="section" id="history" aria-label="Milestones">
   <div class="section-header reveal">
     <div>
-      <div class="section-label">History</div>
+      <div class="section-label">Track Record</div>
       <div class="section-count">2019 — Present</div>
     </div>
   </div>
   <div class="timeline">
     <div class="timeline-item reveal-left">
       <div class="timeline-year">2019</div>
-      <h3 class="timeline-title">Void Founded</h3>
-      <p class="timeline-desc">Arina Kozlov establishes VOID as a design collective in Berlin. First three members. First manifesto. No website.</p>
+      <h3 class="timeline-title">Founded</h3>
+      <p class="timeline-desc">VOID established in Berlin. Three founding members with a shared philosophy on design restraint.</p>
     </div>
     <div class="timeline-item reveal-left reveal-delay-1">
       <div class="timeline-year">2020</div>
-      <h3 class="timeline-title">First Commission</h3>
-      <p class="timeline-desc">Identity system for Black Mirror gallery exhibition. 47 iterations, zero color. The project that defined the approach.</p>
+      <h3 class="timeline-title">Breakthrough</h3>
+      <p class="timeline-desc">Black Mirror identity project. 47 iterations, zero color. That commission defined who we are.</p>
     </div>
     <div class="timeline-item reveal-left reveal-delay-2">
       <div class="timeline-year">2022</div>
-      <h3 class="timeline-title">System Publication</h3>
-      <p class="timeline-desc">Published "Zero One" — a limited-edition monotype catalog. Sold out in 72 hours. Collected by design archives in three countries.</p>
+      <h3 class="timeline-title">Recognition</h3>
+      <p class="timeline-desc">Zero One monotype catalog published. Sold out in 72 hours. Collected by design archives internationally.</p>
     </div>
     <div class="timeline-item reveal-left reveal-delay-3">
       <div class="timeline-year">2024</div>
-      <h3 class="timeline-title">Void Goes Digital</h3>
-      <p class="timeline-desc">Launch of the digital practice and this platform. Twelve members. No compromise on the core principle: subtract until truth remains.</p>
+      <h3 class="timeline-title">Expansion</h3>
+      <p class="timeline-desc">Digital practice launches. Team grows to twelve. Work spans identity, editorial, and spatial design.</p>
     </div>
   </div>
 </section>
@@ -412,7 +411,7 @@
         <label for="contactMessage">Message</label>
         <textarea id="contactMessage" name="message" required></textarea>
       </div>
-      <button type="submit" class="form-submit magnetic-target">Send</button>
+      <button type="submit" class="form-submit">Send</button>
       <div class="form-success" id="formSuccess">Message received. We'll be in touch.</div>
     </form>
   </div>
@@ -420,7 +419,7 @@
     <div class="footer-grid">
       <div class="reveal">
         <div class="footer-brand">VOID</div>
-        <p class="footer-copy">Design Collective<br>Berlin, Germany<br>Est. 2024 — All rights reserved</p>
+        <p class="footer-copy">Design Studio<br>Berlin, Germany<br>Est. 2019 — All rights reserved</p>
       </div>
       <div class="reveal reveal-delay-1">
         <h4 class="footer-col-title">Navigation</h4>
